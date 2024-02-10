@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="./img/heart-flat-icon.webp"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Валентинка</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- =============== -->
+    <div class="page-1">
+      <h2 class="page-1-title">Що за квітка відкрила валентинку?</h2>
+
+      <button class="page-1-btn">
+        <img
+          class="page-1-btn-img"
+          src="./img/heart-flat-icon.webp"
+          alt=""
+          height="180"
+          width="180"
+        />
+        <span class="page-1-btn-text">></span>
+      </button>
+    </div>
+    <!-- ============ -->
+    <div class="page-2 is-opacity">
+      <p class="page-2-text">
+        З днем святого Валентинa <br />
+        Мою квіточку любиму <br />
+        Моє сонечно одне <br />
+        Я кохаю лиш тебе <br />
+        І удень і уночи <br />
+        Я пишу тобі вірші <br />
+        Щоб жили ми в тишені <br />
+        І варила мені борщі😂 <br />
+      </p>
+      <button class="page-2-btn">
+        <img
+          class="page-1-btn-img"
+          src="./img/heart-flat-icon.webp"
+          alt=""
+          height="180"
+          width="180"
+        />
+        <span class="page-1-btn-text">></span>
+      </button>
+    </div>
+    <!-- <svg
+      id="hearts"
+      viewBox="-600 -400 1200 800"
+      preserveAspectRatio="xMidYMid slice"
+    >
+      <defs>
+        <symbol id="heart" viewBox="-69 -16 138 138">
+          <path
+            d="M0,12
+             C 50,-30 110,50  0,120
+             C-110,50 -50,-30 0,12z"
+          />
+        </symbol>
+      </defs>
+    </svg>
+    <script>
+      const colors = [
+        "#e03776",
+        "#8f3e98",
+        "#4687bf",
+        "#3bab6f",
+        "#f9c25e",
+        "#f47274",
+      ];
+      const SVG_NS = "http://www.w3.org/2000/svg";
+      const SVG_XLINK = "http://www.w3.org/1999/xlink";
+
+      let heartsRy = [];
+
+      function useTheHeart(n) {
+        let use = document.createElementNS(SVG_NS, "use");
+        use.n = n;
+        use.setAttributeNS(SVG_XLINK, "xlink:href", "#heart");
+        use.setAttributeNS(null, "transform", `scale(${use.n})`);
+        use.setAttributeNS(null, "fill", colors[n % colors.length]);
+        use.setAttributeNS(null, "x", -69);
+        use.setAttributeNS(null, "y", -69);
+        use.setAttributeNS(null, "width", 138);
+        use.setAttributeNS(null, "height", 138);
+
+        heartsRy.push(use);
+        hearts.appendChild(use);
+      }
+
+      for (let n = 18; n >= 0; n--) {
+        useTheHeart(n);
+      }
+
+      function Frame() {
+        window.requestAnimationFrame(Frame);
+        for (let i = 0; i < heartsRy.length; i++) {
+          if (heartsRy[i].n < 18) {
+            heartsRy[i].n += 0.01;
+          } else {
+            heartsRy[i].n = 0;
+            hearts.appendChild(heartsRy[i]);
+          }
+          heartsRy[i].setAttributeNS(
+            null,
+            "transform",
+            `scale(${heartsRy[i].n})`
+          );
+        }
+      }
+
+      Frame();
+    </script> -->
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
