@@ -51,88 +51,17 @@
       </button>
     </div>
     <div class="page-3 is-opacity">
-      <p
-        class="page-2-text"
-        style="
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          font-size: 40px;
-          color: rgb(2, 1, 2);
-        "
-      >
-        Оксан, Оксанаааа, Оксан <br />
-        Я тебе люблю,<br />
-        да да да да
+      <p>
+        <img src="./img/heart.svg" alt="" width="50" height="50" />
       </p>
-      <svg
-        id="hearts"
-        viewBox="-600 -400 1200 800"
-        preserveAspectRatio="xMidYMid slice"
-      >
-        <defs>
-          <symbol id="heart" viewBox="-69 -16 138 138">
-            <path
-              d="M0,12
-             C 50,-30 110,50  0,120
-             C-110,50 -50,-30 0,12z"
-            />
-          </symbol>
-        </defs>
-      </svg>
-      <script>
-        const colors = [
-          "#e03776",
-          "#8f3e98",
-          "#4687bf",
-          "#3bab6f",
-          "#f9c25e",
-          "#f47274",
-        ];
-        const SVG_NS = "http://www.w3.org/2000/svg";
-        const SVG_XLINK = "http://www.w3.org/1999/xlink";
-
-        let heartsRy = [];
-
-        function useTheHeart(n) {
-          let use = document.createElementNS(SVG_NS, "use");
-          use.n = n;
-          use.setAttributeNS(SVG_XLINK, "xlink:href", "#heart");
-          use.setAttributeNS(null, "transform", `scale(${use.n})`);
-          use.setAttributeNS(null, "fill", colors[n % colors.length]);
-          use.setAttributeNS(null, "x", -69);
-          use.setAttributeNS(null, "y", -69);
-          use.setAttributeNS(null, "width", 138);
-          use.setAttributeNS(null, "height", 138);
-
-          heartsRy.push(use);
-          hearts.appendChild(use);
-        }
-
-        for (let n = 18; n >= 0; n--) {
-          useTheHeart(n);
-        }
-
-        function Frame() {
-          window.requestAnimationFrame(Frame);
-          for (let i = 0; i < heartsRy.length; i++) {
-            if (heartsRy[i].n < 18) {
-              heartsRy[i].n += 0.01;
-            } else {
-              heartsRy[i].n = 0;
-              hearts.appendChild(heartsRy[i]);
-            }
-            heartsRy[i].setAttributeNS(
-              null,
-              "transform",
-              `scale(${heartsRy[i].n})`
-            );
-          }
-        }
-
-        Frame();
-      </script>
+      <div class="img-back">
+        <img
+          src="./img/2024-02-10 6.13.36 PM.jpg"
+          alt=""
+          height="600"
+          width="400"
+        />
+      </div>
     </div>
     <script type="module" src="./index.js"></script>
   </body>
